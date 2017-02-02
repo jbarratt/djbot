@@ -1,0 +1,10 @@
+[Unit]
+Description=DJ Bot service
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /home/pi/robobrain/main.py > /home/pi/bot.log 2>&1
+
+[Install]
+WantedBy=multi-user.target
